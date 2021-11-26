@@ -1,0 +1,57 @@
+group: musicalgroups
+
+
+MUSICIAN = {
+id_musician:number, name:string, birth:date, year_death:number, gender:string, nationality:string
+1,"James Hetfield",1963-08-03,null,'M',"American"
+2,"Paul Rodgers",1949-12-17,null,'M',"English"
+3,"Kirk Hammett",1962-11-18,null,'M',"American"
+4,"Mick Jagger",1943-07-26,null,'M',"English"
+5,"Joey Ramone",1951-05-19,2001,'M',"American"
+6,"Tommy Ramone",1949-01-29,2014,'M',"Hungarian"
+}
+
+
+BAND = {
+id_band:number, name:string, year_formed:number, year_dissolution:number, style:string, origin:string
+1,"Metalica",1981,null,"Heavy","US"
+2,"The Rolling Stones",1962,null,"Rock","England"
+3,"Free",1968,1973,"Rock","England"
+4,"Bad Company",1973,null,"Rock","England"
+5,"Ramones",1974,1996,"Punk","US"
+
+}
+ALBUM = {
+id_album:number, title:string, year:number, duration:number, id_band:number
+1,"Master of Puppets",1986,null,1
+2,"Fire and Water",1970,null,3
+3,"Afermath",1966,null,2
+}
+SONG = {
+id_song:number,title:string, duration:number, id_album:number
+1,"Battery",512,1
+2,"Master of Puppets",835,1
+3,"Mr. Big",555,2
+4,"All Right Now",532,2
+5,"Paint It Black",322,3
+6,"It’s Not Easy",256,3
+}
+
+MEMBER = {
+id_musician:number, id_band:number, instrument:string
+1,1,"Vocals"
+2,3,"Vocals"
+2,4,"Vocals"
+3,1,"Guitar"
+4,2,"Vocals"
+}
+COMPOSER = {
+id_musician:number, id_composer:number
+1,1
+1,2
+3,2
+2,3
+2,4
+4,5
+4,6
+}
